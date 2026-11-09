@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+venv/
+*.venv/
+# Datos que genera la radio al usarla
+*.db
+*.db-journal
+diario_riemann_partitura.csv
+# Paquetes compilados (se publican como Release, no en el código)
+*.deb

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block titulo %}{{ consulta }} · SSS{% endblock %}
+{% block contenido %}
+<main class="resultados">
+  <h1>SSS: {{ consulta }}</h1>
+
+  {% if resultados %}
+  <p class="sincronia">
+    Punto de sincronía <b>α* = <span id="alpha-sincronia">{{ '%.6f'|format(sincronia) if sincronia is not none else '—' }}</span></b>
+    <span class="tenue">· donde SSS y MiniLM dan el mismo valor. Orden por relevancia SSS;
+      <span class="marca-sinc">◆</span> marca el resultado más sincronizado.</span>
+  </p>
+  <p class="fuentes tenue">{{ resultados|length }} resultados · fuentes:
+    {% for g in resultados|groupby('fuente', default='—') %}{{ g.grouper }} {{ g.list|length }}{% if not loop.last %} · {% endif %}{% endfor %}
+  </p>
+  {% endif %}
+
+  <section id="sintesis" class="sintesis" hidden>
+    <h2>Síntesis Gemini Nano</h2>
+    <p id="sintesis-texto"></p>
+  </section>
+
+  <div id="lista">
+  {% for r in resultados %}
+    <article class="resultado{% if r.sincronizado %} sincronizado{% endif %}" data-id="{{ r.id }}">
+      <a href="{{ r.href }}">{{ r.title }}</a>
+      <div class="url" title="{{ r.href }}">{{ r.href.split('://', 1)[-1].split('?', 1)[0].rstrip('/').replace('/', ' › ') }}</div>
+      {% if r.body %}<p class="extracto">{{ r.body|truncate(320, end='…', leeway=20) }}</p>{% endif %}
+      <div class="metricas">
+        <span class="sss">SSS: <b class="alpha">{{ '%.6f'|format(r.alpha) }}</b></span>
+        <span class="minilm">MiniLM: <b>{{ '%.6f'|format(r.alpha_base) }}</b></span>
+        <span class="desfase">Δ <b>{{ '%.6f'|format(r.desfase) }}</b> (<i>{{ '%.1f'|format(r.desfase_rel * 100) }} %</i>)</span>
+        <span class="nano-punt" hidden>Nano: <b></b>/10</span>
+      </div>
+    </article>
+  {% else %}
+    {% if error %}
+    <div class="aviso-error">
+      <b>El buscador ha fallado.</b> No es que no haya resultados: los buscadores no han contestado.
+      Suele pasar cuando bloquean las búsquedas automáticas; se puede volver a intentar en unos minutos.
+      <div class="detalle">{{ error }}</div>
+    </div>
+    {% else %}
+    <p>Sin resultados de resonancia.</p>
+    {% endif %}
+  {% endfor %}
+  </div>
+</main>
+<script id="datos-sss" type="application/json">{{ {'consulta': consulta, 'resultados': resultados}|tojson }}</script>
+{% endblock %}

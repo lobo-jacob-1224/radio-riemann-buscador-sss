@@ -1,0 +1,9 @@
+[Unit]
+Description=Buscador SSS: vigila el puerto 5002 y arranca SSS con la primera búsqueda
+
+[Socket]
+ListenStream=127.0.0.1:5002
+NoDelay=true
+
+[Install]
+WantedBy=sockets.target

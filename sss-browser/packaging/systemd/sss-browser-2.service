@@ -1,0 +1,15 @@
+[Unit]
+Description=Buscador SSS: servidor de búsqueda (lo arranca sss-browser-2.socket)
+Requires=sss-browser-2.socket
+After=sss-browser-2.socket
+
+[Service]
+Type=simple
+# MiniLM already downloaded: do not ask huggingface.co for updates on every start
+ExecStart=/bin/sh -c 'if [ -d "$$HOME/.cache/huggingface/hub/models--sentence-transformers--paraphrase-multilingual-MiniLM-L12-v2" ]; then export HF_HUB_OFFLINE=1; fi; exec /var/lib/sss-browser-2/venv/bin/python /usr/share/sss-browser-2/servidor_mono.py 5002 --auto-apagado 600'
+WorkingDirectory=/usr/share/sss-browser-2
+# Stops by itself after 10 min without searches; the socket starts it again when needed
+Restart=no
+# Never let SSS take the whole computer
+MemoryMax=3G
+CPUQuota=300%

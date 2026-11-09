@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect x="8" y="30" width="112" height="82" rx="12" fill="#3b2a1d" stroke="#d4af37" stroke-width="4"/>
+  <line x1="30" y1="30" x2="86" y2="8" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/>
+  <rect x="18" y="40" width="92" height="26" rx="4" fill="#2d241e" stroke="#8b5e34" stroke-width="2"/>
+  <line x1="58" y1="42" x2="58" y2="64" stroke="#ff3300" stroke-width="3"/>
+  <path d="M22 92 Q 30 72 38 92 T 54 92 T 70 92 T 86 92 T 102 92" fill="none" stroke="#00ffaa" stroke-width="4" stroke-linecap="round"/>
+  <text x="104" y="62" font-family="DejaVu Serif" font-size="20" font-weight="bold" fill="#d4af37" text-anchor="end">ζ</text>
+</svg>

@@ -1,0 +1,13 @@
+#!/bin/sh
+VENV=/var/lib/sss-browser-2/venv
+if [ ! -x "$VENV/bin/python" ]; then
+    echo "Falta el entorno de Python de sss-browser-2. Se crea con: sudo /usr/share/sss-browser-2/instalar_entorno.sh $VENV" >&2
+    exit 1
+fi
+export SSS_PUERTO="${SSS_PUERTO:-5002}"
+export SSS_VERSION="2.0.5"
+# Model already downloaded: do not ask huggingface.co for updates on every start
+if [ -d "$HOME/.cache/huggingface/hub/models--sentence-transformers--paraphrase-multilingual-MiniLM-L12-v2" ]; then
+    export HF_HUB_OFFLINE="${HF_HUB_OFFLINE:-1}"
+fi
+exec "$VENV/bin/python" /usr/share/sss-browser-2/sss_chrome.py "$@"

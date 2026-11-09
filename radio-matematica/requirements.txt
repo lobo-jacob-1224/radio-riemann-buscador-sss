@@ -1,0 +1,4 @@
+numpy
+scipy
+matplotlib
+# Además, del sistema: python3-tk, ffmpeg y pw-play (pipewire-bin)

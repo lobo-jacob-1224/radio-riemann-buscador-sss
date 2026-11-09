@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Radio Matemática 2
+Comment=Radio por Internet con el motor de los ceros de Riemann
+Exec=radio-matematica-2
+Icon=radio-matematica-2
+Terminal=false
+Categories=AudioVideo;Audio;Player;

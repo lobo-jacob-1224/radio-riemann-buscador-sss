@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block titulo %}Buscador SSS{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='sss.css') }}">
+<link rel="search" type="application/opensearchdescription+xml" title="Buscador SSS" href="/opensearch.xml">
+</head>
+<body>
+<header class="barra">
+  <a class="marca" href="/">SSS</a>
+  <form action="/search" class="busqueda-mini">
+    <input name="q" value="{{ consulta|default('') }}" placeholder="Búsqueda SSS..." autocomplete="off">
+  </form>
+  <span id="estado-nano" class="nano nano-comprobando" title="Estado de Gemini Nano">Nano: comprobando…</span>
+  <button id="activar-nano" class="boton-nano" hidden>Activar Gemini Nano</button>
+</header>
+{% block contenido %}{% endblock %}
+<script src="{{ url_for('static', filename='nano.js') }}"></script>
+</body>
+</html>
