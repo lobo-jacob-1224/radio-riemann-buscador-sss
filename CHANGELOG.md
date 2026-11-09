@@ -4,7 +4,7 @@
 
 ### 2.0.1-1
 
-- Textos limpios: sin la palabra «Fisioforma» en comentarios y mensajes. Mismo funcionamiento.
+- Textos limpios: sin el nombre antiguo del proyecto en comentarios y mensajes. Mismo funcionamiento.
 - Sin los informes PDF: la documentación está en este repositorio.
 
 _9 nov 2026_
@@ -31,7 +31,7 @@ _Wed, 28 Oct 2026 15:34:02 +0100_
 
 ### 2.0.6-1
 
-- Textos limpios: sin la palabra «Fisioforma» en páginas, menús, servicio y mensajes. El servidor se identifica como «sss-buscador». Mismo funcionamiento.
+- Textos limpios: sin el nombre antiguo del proyecto en páginas, menús, servicio y mensajes. El servidor se identifica como «sss-buscador». Mismo funcionamiento.
 - Sin el informe PDF: la documentación está en este repositorio.
 
 _9 nov 2026_
