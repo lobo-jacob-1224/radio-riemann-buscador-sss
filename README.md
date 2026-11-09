@@ -10,7 +10,7 @@ Dos programas de **Jacobo Cánovas García** que funcionan con la misma idea: **
 | [**Radio Matemática**](radio-matematica/) | Radio por Internet que procesa la emisora en tiempo real | Audio estéreo de 44,1 kHz | 20 ceros de la función zeta de Riemann colocados como filtros, con ganancias que siguen a la música |
 | [**SSS Browser**](sss-browser/) | Buscador web con ventana propia | Resultados de búsqueda web | Similitud semántica (MiniLM) transformada por la fórmula SSS: Bessel, horizonte de Schwarzschild y derivada de Bessel |
 
-Los dos están escritos en Python, funcionan en Linux y se han usado como paquetes Debian (`radio-matematica-2` 2.0.0 y `sss-browser-2` 2.0.5).
+Los dos están escritos en Python, funcionan en Linux y se han usado como paquetes Debian (`radio-matematica-2` 2.0.1 y `sss-browser-2` 2.0.6), que se pueden descargar e instalar: ver [Descargas](#descargas).
 
 ---
 
@@ -42,12 +42,12 @@ donde $\rho$ depende de cuántos resultados hay y $\sigma$ es la media de los $\
 
 ```
 radio-riemann-buscador-sss/
-├── radio-matematica/          Radio Matemática 2.0.0
+├── radio-matematica/          Radio Matemática 2.0.1
 │   ├── engine.py              ventana, emisoras, audio, base de datos
 │   ├── motor_convergencia_infinito.py   el motor matemático (filtro de Riemann)
 │   ├── radio_cuantica.py      versión anterior, más simple (ver «Limitaciones»)
 │   └── packaging/             lanzador, icono y acceso directo del paquete Debian
-├── sss-browser/               SSS Browser 2.0.5
+├── sss-browser/               SSS Browser 2.0.6
 │   ├── motor_semantico_experimental.py  la fórmula SSS
 │   ├── vaya_mono.py           búsqueda web, MiniLM, SSS y punto de sincronía
 │   ├── servidor_mono.py       servidor web local (Flask)
@@ -58,6 +58,24 @@ radio-riemann-buscador-sss/
 ├── CHANGELOG.md
 └── LICENSE                    GNU GPL v3.0
 ```
+
+## Descargas
+
+Paquetes para Debian, Ubuntu y derivadas, en la página de [versiones publicadas](https://github.com/lobo-jacob-1224/radio-riemann-buscador-sss/releases/latest):
+
+| Programa | Paquete |
+|---|---|
+| Radio Matemática 2.0.1 | [radio-matematica-2_2.0.1-1_all.deb](https://github.com/lobo-jacob-1224/radio-riemann-buscador-sss/releases/latest/download/radio-matematica-2_2.0.1-1_all.deb) |
+| Buscador SSS 2.0.6 | [sss-browser-2_2.0.6-1_all.deb](https://github.com/lobo-jacob-1224/radio-riemann-buscador-sss/releases/latest/download/sss-browser-2_2.0.6-1_all.deb) |
+
+Instalación (instala también las dependencias):
+
+```bash
+sudo apt install ./radio-matematica-2_2.0.1-1_all.deb
+sudo apt install ./sss-browser-2_2.0.6-1_all.deb
+```
+
+El buscador necesita Python 3.14 o posterior. Al instalarse crea su entorno de Python en `/var/lib/sss-browser-2`, lo que descarga aproximadamente 1 GB y requiere conexión a Internet.
 
 ## Inicio rápido
 

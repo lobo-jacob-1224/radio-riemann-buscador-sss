@@ -5,7 +5,7 @@ if [ ! -x "$VENV/bin/python" ]; then
     exit 1
 fi
 export SSS_PUERTO="${SSS_PUERTO:-5002}"
-export SSS_VERSION="2.0.5"
+export SSS_VERSION="2.0.6"
 # Model already downloaded: do not ask huggingface.co for updates on every start
 if [ -d "$HOME/.cache/huggingface/hub/models--sentence-transformers--paraphrase-multilingual-MiniLM-L12-v2" ]; then
     export HF_HUB_OFFLINE="${HF_HUB_OFFLINE:-1}"

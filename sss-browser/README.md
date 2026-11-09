@@ -1,6 +1,6 @@
 # SSS Browser
 
-**Versión 2.0.5** · Python · Linux
+**Versión 2.0.6** · Python · Linux
 
 Buscador web con ventana propia. Busca en Internet, mide con un modelo de lenguaje (**MiniLM**) cuánto se parece cada resultado a lo que has buscado y pasa esa medida por la **fórmula SSS**, que ordena los resultados y calcula el **punto de sincronía** $\alpha^*$. Si se abre en Google Chrome, **Gemini Nano** (el modelo que viene dentro de Chrome) puntúa también los resultados, esa puntuación se fusiona con MiniLM y Nano escribe un resumen con las fuentes citadas.
 
@@ -176,7 +176,7 @@ En la terminal, `vaya_mono.py` escribe primero el punto de sincronía α\*. Desp
 
 ## Paquete Debian
 
-En `packaging/` están los lanzadores de `/usr/bin`, el servicio y el socket de systemd, los accesos directos y el icono del paquete `sss-browser-2_2.0.5-1_all.deb`. El paquete espera el entorno de Python en `/var/lib/sss-browser-2/venv`.
+En `packaging/` están los lanzadores de `/usr/bin`, el servicio y el socket de systemd, los accesos directos y el icono del paquete `sss-browser-2_2.0.6-1_all.deb`. El paquete espera el entorno de Python en `/var/lib/sss-browser-2/venv`.
 
 ## Configuración
 

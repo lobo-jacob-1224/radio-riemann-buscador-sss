@@ -1,6 +1,6 @@
 # Radio Matemática
 
-**Versión 2.0.0** · Python · Linux
+**Versión 2.0.1** · Python · Linux
 
 Radio por Internet que no se limita a reproducir. Cada bloque de audio de la emisora pasa por un **motor matemático** que coloca 20 filtros en frecuencias sacadas de los **ceros de la función zeta de Riemann**. Las ganancias de esos filtros siguen a la música en tiempo real. La ventana muestra el espectro, el estado de los 20 modos y lo que va midiendo el motor, y lo guarda todo en una base de datos.
 
@@ -190,4 +190,4 @@ emisora ──ffmpeg──► PCM s16 estéreo ──► MotorConvergencia ─�
 
 ## Paquete Debian
 
-En `packaging/` están el lanzador (`/usr/bin/radio-matematica-2`), el acceso directo y el icono del paquete `radio-matematica-2_2.0.0-1_all.deb`.
+En `packaging/` están el lanzador (`/usr/bin/radio-matematica-2`), el acceso directo y el icono del paquete `radio-matematica-2_2.0.1-1_all.deb`.

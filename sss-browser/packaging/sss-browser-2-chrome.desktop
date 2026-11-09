@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=Buscador SSS 2.0.5 (Chrome + Nano)
-Comment=El buscador SSS abierto en Google Chrome, con Gemini Nano (versión 2.0.5)
+Name=Buscador SSS 2.0.6 (Chrome + Nano)
+Comment=El buscador SSS abierto en Google Chrome, con Gemini Nano (versión 2.0.6)
 Exec=sss-browser-2-chrome
 Icon=sss-browser-2
 Terminal=false

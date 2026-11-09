@@ -2,6 +2,13 @@
 
 ## Radio Matemática
 
+### 2.0.1-1
+
+- Textos limpios: sin la palabra «Fisioforma» en comentarios y mensajes. Mismo funcionamiento.
+- Sin los informes PDF: la documentación está en este repositorio.
+
+_9 nov 2026_
+
 ### 2.0.0-1
 
 - Arreglos: base de datos y catálogo de canciones vuelven a guardarse
@@ -21,6 +28,13 @@
 _Wed, 28 Oct 2026 15:34:02 +0100_
 
 ## SSS Browser
+
+### 2.0.6-1
+
+- Textos limpios: sin la palabra «Fisioforma» en páginas, menús, servicio y mensajes. El servidor se identifica como «sss-buscador». Mismo funcionamiento.
+- Sin el informe PDF: la documentación está en este repositorio.
+
+_9 nov 2026_
 
 ### 2.0.5-1
 

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=Buscador SSS 2.0.5
-Comment=Buscador con MiniLM y la fórmula SSS, en ventana propia (versión 2.0.5)
+Name=Buscador SSS 2.0.6
+Comment=Buscador con MiniLM y la fórmula SSS, en ventana propia (versión 2.0.6)
 Exec=sss-browser-2
 Icon=sss-browser-2
 Terminal=false
